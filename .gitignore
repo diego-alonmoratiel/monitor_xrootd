@@ -1,0 +1,7 @@
+PC/volumes/grafana.db
+PC/volumes/csv/
+PC/volumes/pdf/
+PC/volumes/png/
+PC/volumes/plugins/
+PC/volumes/prometheus-data
+*.log

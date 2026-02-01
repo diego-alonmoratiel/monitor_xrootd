@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  grafana:
+    image: grafana/grafana-oss
+    container_name: grafana
+    restart: unless-stopped
+    ports:
+     - '3000:3000'
+    volumes:
+     - ./volumes:/var/lib/grafana
+    user: "472:472"
+    depends_on:
+      - prometheus
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    restart: unless-stopped
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./volumes/prometheus-data:/prometheus/data
+      - ./volumes/prometheus-config/prometheus.yml:/etc/prometheus/prometheus.yml  # Mount local Prometheus config
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+
