@@ -1,0 +1,30 @@
+name: Docker Build Validation
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-flask-server:
+    name: Build Flask Server (Raspberry Pi)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Flask Server image
+        run: |
+          docker build -t flask-server ./raspberry-PI
+
+  build-xrootd-downloader:
+    name: Build XRootD Downloader (PC)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build XRootD Downloader image
+        run: |
+          docker build -t xrootd-downloader ./PC/script-retrieve-xrd
