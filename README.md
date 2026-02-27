@@ -3,8 +3,7 @@
 This repository contains a distributed monitoring system designed to track data transfers via the XRootD protocol. The project utilizes a hybrid architecture involving a local workstation and a Raspberry Pi, orchestrated via Docker and monitored using the Prometheus/Grafana stack.
 
 ## 🎯 Purpose
-This repository implements a scalable telemetry pipeline for monitoring **XRootD data transfers** across heterogeneous storage nodes. It was specifically designed to demonstrate the technical competencies required for the **CERN Computing Engineer Graduate** position (Ref: IT-TC-LCG-2025-241-GRAE).
-
+This repository implements a scalable telemetry pipeline for monitoring **XRootD data transfers** across heterogeneous storage nodes.
 ### Core Technologies:
 - **Data Protocol:** XRootD
 
