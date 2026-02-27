@@ -114,7 +114,6 @@ docker run --rm -d --name script script-retrieve
 ```
 The launch of this container can be automatized with CRON utility.
 ## 🔬 Alignment with CERN WLCG Requirements
-This project serves as a practical validation of the following skills requested in the IT-TC-LCG-2025-241-GRAE offer:
 
 * **XRootD Monitoring:** Direct experience with the protocol used for global LHC data movement.
 * **Scalable Monitoring Pipelines:** Hands-on integration of Prometheus and Grafana for infrastructure health.
