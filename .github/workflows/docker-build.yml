@@ -16,7 +16,7 @@ jobs:
 
       - name: Build Flask Server image
         run: |
-          docker build -t flask-server ./raspberry-PI
+          docker build -t flask-server raspberry-PI/flask-server
 
   build-xrootd-downloader:
     name: Build XRootD Downloader (PC)
